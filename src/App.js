@@ -1,27 +1,40 @@
-
-import './App.css';
+import React from 'react';
 import {
-  BrowserRouter,
+
+
+  BrowserRouter as Router,
   Routes,
   Route,
-  Link
+
 } from "react-router-dom";
+
 import Home from './Component/Home/Home/Home';
-import TopBanner from './Component/Home/TopBanner/TopBanner';
 import Header from './Component/Shared/Header/Header';
 import Footer from './Component/Shared/Footer/Footer';
+import Loging from './Component/Loging/Loging/Loging';
+import Products from './Component/Home/Products/Products';
+import Shopping from './Component/Home/Shopping/Shopping';
 
-function App() {
+
+const App = () => {
   return (
-    <BrowserRouter>
-      <Header />
+    <Router>
+      <Header></Header>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="banner/" element={<TopBanner />} />
+        <Route path="products" element={<Products />} />
+        <Route path="loging" element={<Loging />} />
+        <Route path="shopping" element={<Shopping />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
-  );
-}
+
+    </Router>
+
+  )
+};
 
 export default App;
+
+
+
+
