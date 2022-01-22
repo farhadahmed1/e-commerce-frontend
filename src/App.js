@@ -1,30 +1,28 @@
 import React from 'react';
 import {
-
-
   BrowserRouter as Router,
   Routes,
   Route,
 
 } from "react-router-dom";
+import Product from './pages/Product';
+import Home from './pages/Home';
+import Footer from './component/Footer/Footer';
+import Header from './component/Header/Header';
+import Loging from './pages/Loging';
+import Register from './pages/Register';
 
-import Home from './Component/Home/Home/Home';
-import Header from './Component/Shared/Header/Header';
-import Footer from './Component/Shared/Footer/Footer';
-import Loging from './Component/Loging/Loging/Loging';
-import Products from './Component/Home/Products/Products';
-import Shopping from './Component/Home/Shopping/Shopping';
 
 
 const App = () => {
   return (
     <Router>
-      <Header></Header>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="products" element={<Products />} />
+        <Route path="products" element={<Product />} />
         <Route path="loging" element={<Loging />} />
-        <Route path="shopping" element={<Shopping />} />
+        <Route path="register" element={<Register />} />
       </Routes>
       <Footer />
 
